@@ -1,0 +1,32 @@
+INSERT INTO COMERCIALES (ID, NOMBRE, APELLIDO1, APELLIDO2) VALUES 
+(1000, 'Anna','Vilchez','Marín'),
+(1001, 'Ricardo','Puig','Badimón'),
+(1002, 'José Ramón','Gimeno','Quesada');
+
+	
+INSERT INTO CLIENTES (ID, NOMBRE_COMERCIAL, NOMBRE, APELLIDO1, APELLIDO2, TELEFONO, MOVIL, EMAIL, DIRECCION, POBLACION, CODIGO_POSTAL, PROVINCIA, PAIS) VALUES
+('B46223716','CARPINETERIA METALICA INDUSTRIAL HERMANOS MATA, S.L.', 'José Ramón', 'Mata', 'Francino', '+91250456987', '+34654873201', 'joseramon@prueba.com','Calle Madrid 1', 'Madrid', '28000' ,'Madrid', 'España'),
+('46344938L', null, 'Honorio', 'Martín', 'Salvador', '+91250456987', '+34654873201', 'honorio@prueba.com','Calle Madrid 1', 'Madrid', '28001','Madrid', 'España'),
+('20059821R','PEK-SOFT', 'Pepín', 'Gálvez', 'Ridruejo', '+91250456987', '+34654873201', 'galvez@prueba.com','Calle Madrid 1', 'Madrid', '28001','Madrid', 'España');
+
+
+INSERT INTO PRODUCTOS (CODIGO, NOMBRE, FECHA_ALTA, PRECIO, FAMILIA, DESCATALOGADO) VALUES 
+(1000, 'Alfombrilla','2020-02-15', 15.0, 'CONSUMIBLES', false),
+(1001, 'Teclado','2021-03-15', 15.0, 'HARDWARE',  true),
+(1002, 'Windows','2022-04-15', 150.0, 'SOFTWARE',  false);
+
+
+INSERT INTO PEDIDOS (CODIGO, FECHA_HORA, ID_COMERCIAL, ID_CLIENTE, OBSERVACIONES) VALUES 
+(100,'2020-02-15', 1000, 'B46223716', 'Todo correcto'),
+(101,'2021-02-15', 1000, 'B46223716', 'Todo correcto'),
+(102,'2022-02-15', 1002, '20059821R', 'Todo correcto');
+
+INSERT INTO SECUENCIAS (IDS, VALOR) VALUES
+('LINEA_SECUENCIA', 100);
+
+INSERT INTO LINEAS_PEDIDOS (CODIGO_PRODUCTO, CODIGO_PEDIDO, CANTIDAD) VALUES
+(1000, 100, 1),
+(1001, 101, 4),
+(1000, 100, 3),
+(1002, 102, 6);
+
